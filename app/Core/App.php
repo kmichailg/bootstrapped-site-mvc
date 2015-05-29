@@ -11,7 +11,7 @@
 			$url = $this->parseUrl();
 
 			//if there is a controller in $url[0]
-			if(file_exists(CONTROLLERS_PATH . $url[0] . '.php')) {
+			if(file_exists(CONTROLLERS_PATH . "/" . $url[0] . '.php')) {
 				$this->controller = $url[0];
 				unset($url[0]);				
 			}
@@ -19,7 +19,7 @@
 			require_once CONTROLLERS_PATH . "/" . $this->controller . '.php';
 
 			$this->controller = new $this->controller;
-
+			
 			//Check if there is an existing method in the controller found
 			if(isset($url[1])) {
 				//Check if there is an existing method in the controller found
@@ -29,8 +29,9 @@
 				}
 			}
 
-			$this->params = $url ? array_values($url) : [];
 
+			$this->params = $url ? array_values($url) : [];
+			var_dump($this->params);
 			call_user_func_array([$this->controller, $this->method], $this->params);
 		}
 

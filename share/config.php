@@ -52,7 +52,7 @@
         or define("CONTROLLERS_PATH", realpath(dirname(__DIR__) . '/app/Controllers/'));
 
     defined("PUBLIC_PATH")
-        or define("PUBLIC_PATH", realpath(dirname(__DIR__) . '/public/'));
+        or define("PUBLIC_PATH", $_SERVER["DOCUMENT_ROOT"] . '/public/');
 
     defined("LIBRARY_PATH")
         or define("LIBRARY_PATH", realpath(dirname(__DIR__) . '/library/'));

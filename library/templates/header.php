@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!-- Bootstrap core CSS -->
-    <link href="<? echo PUBLIC_PATH; ?>/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo PUBLIC_PATH; ?>css/bootstrap.min.css" rel="stylesheet">
 </head>
  
 <body>

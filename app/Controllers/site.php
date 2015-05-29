@@ -7,4 +7,8 @@
 
 			$this->view('homepage');
 		}
+
+		public function hello(){
+			$this->view("site/hello");
+		}
 	}
