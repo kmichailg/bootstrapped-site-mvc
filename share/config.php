@@ -43,22 +43,22 @@ Creating path constants for heavily used paths.
  */
 
 defined('MODELS_PATH')
-or define('MODELS_PATH', realpath($_SERVER['DOCUMENT_ROOT'] . '/app/Models/'));
+or define('MODELS_PATH', realpath(dirname(__DIR__) . '/app/Models/'));
 
 defined('VIEWS_PATH')
-or define('VIEWS_PATH', realpath($_SERVER['DOCUMENT_ROOT'] . '/app/Views/'));
+or define('VIEWS_PATH', realpath(dirname(__DIR__) . '/app/Views/'));
 
 defined('CONTROLLERS_PATH')
-or define('CONTROLLERS_PATH', realpath($_SERVER['DOCUMENT_ROOT'] . '/app/Controllers/'));
+or define('CONTROLLERS_PATH', realpath(dirname(__DIR__) . '/app/Controllers/'));
 
 defined('PUBLIC_PATH')
 or define('PUBLIC_PATH', $_SERVER['DOCUMENT_ROOT'] . '/public/');
 
 defined('LIBRARY_PATH')
-or define('LIBRARY_PATH', realpath($_SERVER['DOCUMENT_ROOT'] . '/library/'));
+or define('LIBRARY_PATH', realpath(dirname(__DIR__) . '/library/'));
 
 defined('TEMPLATES_PATH')
-or define('TEMPLATES_PATH', realpath($_SERVER['DOCUMENT_ROOT'] . '/library/templates/'));
+or define('TEMPLATES_PATH', realpath(dirname(__DIR__) . '/library/templates/'));
 
 /*
 Error reporting.
