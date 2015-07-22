@@ -1,69 +1,67 @@
 <?php
-    $config = array(
-        //db — Store database credentials or other data pertaining to your databases.
-        "db" => array(
-            //For development
-            "db1" => array(
-                "dbname" => "onecollections",
-                "username" => "root",
-                "password" => "",
-                "host" => "localhost"
-            ),
-            //For deployment
-            "db2" => array(
-                "dbname" => "",
-                "username" => "",
-                "password" => "",
-                "host" => ""
-            )
+$config = array(
+    //db — Store database credentials or other data pertaining to your databases.
+    'db' => array(
+        //For development
+        'db1' => array(
+            'dbname' => 'sample',
+            'username' => 'root',
+            'password' => '',
+            'host' => 'localhost',
         ),
-        //urls — Storing urls can be really handy when referencing remote resources throughout the site.
-        "urls" => array(
-            "baseUrl" => "http://example.com"
+        //For deployment
+        'db2' => array(
+            'dbname' => '',
+            'username' => '',
+            'password' => '',
+            'host' => '',
         ),
-        //paths — Commonly used paths to various resources for your site. e.g. log files, upload directories, resources
-        "paths" => array(
-            "resources" => "/resources",
-            "images" => array(
-                "content" => $_SERVER["DOCUMENT_ROOT"] . "/images/content",
-                "layout" => $_SERVER["DOCUMENT_ROOT"] . "/images/layout"
-            )
-        )
-        //emails — Store debugging or admin emails to use when handling errors or in contact forms.
-    );
-     
-    /*
-        I will usually place the following in a bootstrap file or some type of environment
-        setup file (code that is run at the start of every page request), but they work 
-        just as well in your config file if it's in php (some alternatives to php are xml or ini files).
-    */
-     
-    /*
-        Creating path constants for heavily used paths.
-    */
+    ),
+    //urls — Storing urls can be really handy when referencing remote resources throughout the site.
+    'urls' => array(
+        'baseUrl' => 'http://example.com',
+    ),
+    //paths — Commonly used paths to various resources for your site. e.g. log files, upload directories, resources
+    'paths' => array(
+        'resources' => '/resources',
+        'images' => array(
+            'content' => $_SERVER['DOCUMENT_ROOT'] . '/images/content',
+            'layout' => $_SERVER['DOCUMENT_ROOT'] . '/images/layout',
+        ),
+    ),
+    //emails — Store debugging or admin emails to use when handling errors or in contact forms.
+);
 
-    defined("MODELS_PATH")
-        or define("MODELS_PATH", realpath(dirname(__DIR__) . '/app/Models/'));
+/*
+I will usually place the following in a bootstrap file or some type of environment
+setup file (code that is run at the start of every page request), but they work
+just as well in your config file if it's in php (some alternatives to php are xml or ini files).
+ */
 
-    defined("VIEWS_PATH")
-        or define("VIEWS_PATH", realpath(dirname(__DIR__) . '/app/Views/'));
+/*
+Creating path constants for heavily used paths.
+ */
 
-    defined("CONTROLLERS_PATH")
-        or define("CONTROLLERS_PATH", realpath(dirname(__DIR__) . '/app/Controllers/'));
+defined('MODELS_PATH')
+or define('MODELS_PATH', realpath($_SERVER['DOCUMENT_ROOT'] . '/app/Models/'));
 
-    defined("PUBLIC_PATH")
-        or define("PUBLIC_PATH", $_SERVER["DOCUMENT_ROOT"] . '/public/');
+defined('VIEWS_PATH')
+or define('VIEWS_PATH', realpath($_SERVER['DOCUMENT_ROOT'] . '/app/Views/'));
 
-    defined("LIBRARY_PATH")
-        or define("LIBRARY_PATH", realpath(dirname(__DIR__) . '/library/'));
+defined('CONTROLLERS_PATH')
+or define('CONTROLLERS_PATH', realpath($_SERVER['DOCUMENT_ROOT'] . '/app/Controllers/'));
 
-    defined("TEMPLATES_PATH")
-        or define("TEMPLATES_PATH", realpath(dirname(__DIR__) . '/library/templates/'));
-     
-    /*
-        Error reporting.
-    */
-    ini_set("error_reporting", "true");
-    error_reporting(E_ALL|E_STRCT);
- 
-?>
+defined('PUBLIC_PATH')
+or define('PUBLIC_PATH', $_SERVER['DOCUMENT_ROOT'] . '/public/');
+
+defined('LIBRARY_PATH')
+or define('LIBRARY_PATH', realpath($_SERVER['DOCUMENT_ROOT'] . '/library/'));
+
+defined('TEMPLATES_PATH')
+or define('TEMPLATES_PATH', realpath($_SERVER['DOCUMENT_ROOT'] . '/library/templates/'));
+
+/*
+Error reporting.
+ */
+ini_set('error_reporting', 'true');
+error_reporting(E_ALL | E_STRCT);

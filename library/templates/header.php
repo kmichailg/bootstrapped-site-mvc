@@ -1,16 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
- 
+
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!-- Bootstrap core CSS -->
-    <link href="<?php echo PUBLIC_PATH; ?>css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo PUBLIC_PATH;?>css/bootstrap.min.css" rel="stylesheet">
 </head>
- 
+
 <body>
 <!-- Static navbar -->
-    <nav class="navbar navbar-default navbar-static-top">
+    <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -19,7 +19,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">OneNetwork eCommerce</a>
+          <a class="navbar-brand" href="#">Site Header</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -35,7 +35,7 @@
               </ul>
             </li>
           </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+        </div><!-- END NAVBAR COLLAPSE -->
+      </div><!-- END PAGE CONTAINER -->
+    </div>
 </div>
